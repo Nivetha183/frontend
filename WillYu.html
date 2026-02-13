@@ -11,11 +11,24 @@
         <style>
         #noBtn {
             position: absolute; /* Required for top/left to work */
-            padding: 10px 20px;
-            background-color: red;
-            color: white;
-            border: none;
             cursor: pointer;
+            font-weight: 800;
+    font-style: normal;
+    transition: all 0.1s linear;
+    background-color: transparent;
+    border: solid 2px #FF6863;
+    border-radius: 4px;
+    color: #FF6863;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px;
+    margin-top: 110px;
+    padding: 10px;
+    line-height: 2em;
+    text-decoration: none;
+    min-width: 150px;
+    outline: none;
         }
     </style>
     </head>
@@ -26,7 +39,8 @@
                 <div class="front flap"></div>
                 <div class="front pocket"></div>
                 <div class="letter">
-                    <h1 class="words line1">I Love You Always, and Forever</h1>
+                    <h1 class="words line1">I Love You</h1>
+                    <h1 class="words line1"> Always, and Forever </h1>
                 </div>
                 <div class="hearts">
                     <div class="heart a1"></div>
@@ -58,7 +72,7 @@
 
             // Set random position
             btn.css({
-                top: Math.random() * maxY + "px",
+                bottom: Math.random() * maxY + "px",
                 left: Math.random() * maxX + "px"
             });
         }
