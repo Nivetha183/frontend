@@ -4,22 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <title>Virtual Valentine's Day Card</title>
+        <title> Valentine's Day</title>
 
         <!-- Style CSS -->
         <link rel="stylesheet" href="./style.css">
+        <style>
+        #noBtn {
+            position: absolute; /* Required for top/left to work */
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
     </head>
     <body>
-        <h1 class="valentine">Hi, please check out my Valentine's e-letter for you!</h1>
+        <h1 class="valentine">Will You Be My Valentine?</h1>
         <div class="envelope-wrapper">
             <div id="envelope" class="close">
                 <div class="front flap"></div>
                 <div class="front pocket"></div>
                 <div class="letter">
-                    <p class="words line1">Hello there,</p>
-                    <p class="words line2">Will you be my Valentine?</p>
-                    <p class="words line3">Love,</p>
-                    <p class="words line4">Remy</p>
+                    <h1 class="words line1">I Love You Always, and Forever</h1>
                 </div>
                 <div class="hearts">
                     <div class="heart a1"></div>
@@ -29,11 +36,35 @@
             </div>
         </div>
         <div class="reset">
-            <button id="open">Open</button>
-            <button id="reset">Close</button>
+            <button id="open">Yes</button>
+            <button id="noBtn">No</button>
         </div>
         
         <!-- Script JS -->
         <script src="./script.js"></script>
+         
+
+    <script>
+        function moveButtonRandomly() {
+            const btn = $("#noBtn");
+
+            // Get button dimensions
+            const btnWidth = btn.outerWidth();
+            const btnHeight = btn.outerHeight();
+
+            // Calculate max positions so button stays fully visible
+            const maxX = window.innerWidth - btnWidth;
+            const maxY = window.innerHeight - btnHeight;
+
+            // Set random position
+            btn.css({
+                top: Math.random() * maxY + "px",
+                left: Math.random() * maxX + "px"
+            });
+        }
+
+        // Move button when hovered
+        $("#noBtn").on("mouseenter", moveButtonRandomly);
+    </script>
     </body>
 </html>
