@@ -1,46 +1,39 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet" />
-</head>
-<body class="scissors">
-  <div class="envelop">
-    <div class="envelop__front-paper"></div>
-    <div class="envelop__back-paper"></div>
-    <div class="envelop__up-paper js-up-paper"></div>
-    <div class="envelop__sticker js-sticker"></div>
-    <div class="envelop__false-sticker"></div>
-    <div class="envelop__content js-envelop-content">
-      <div class="love-notes">
-        <div class="note js-note">
-          <div class="note__text">
-            <p>
-Hi love, I want to thank you for everything, for the joys, for the laughter, for the beautiful moments, but also for the bad ones, because even though there are bad moments...
-            </p>
-          </div>
-        </div>
-        <div class="note js-note">
-          <div class="note__text">
-            <p>
-I want to go through these things with you, to fight and overcome them together. You're truly very important to me, I love what we have together, and I know we can improve and maintain it if we both want to—and believe me, I do.
-            </p>
-          </div>
-        </div>
-        <div class="note js-note">
-          <div class="note__text">
-            <p>
-I truly love you and I know we can make it, and I will try until it's no longer in my hands, because I'm not with you out of need or superficiality, I'm with you by choice.
-            </p>
-            <p>
-I love you silly ♥.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>Virtual Valentine's Day Card</title>
 
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1 class="valentine">Hi, please check out my Valentine's e-letter for you!</h1>
+        <div class="envelope-wrapper">
+            <div id="envelope" class="close">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <p class="words line1">Hello there,</p>
+                    <p class="words line2">Will you be my Valentine?</p>
+                    <p class="words line3">Love,</p>
+                    <p class="words line4">Remy</p>
+                </div>
+                <div class="hearts">
+                    <div class="heart a1"></div>
+                    <div class="heart a2"></div>
+                    <div class="heart a3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="reset">
+            <button id="open">Open</button>
+            <button id="reset">Close</button>
+        </div>
+        
+        <!-- Script JS -->
+        <script src="./script.js"></script>
+    </body>
 </html>
